@@ -9,7 +9,8 @@
     "dev": "nodemon dist/app.js",
     "dev-ts": "nodemon src/app.ts",
     "start": "node dist/app.js",
-    "start-ts": "ts-node src/app.ts"
+    "start-ts": "ts-node src/app.ts",
+    "create:migration": "mikro-orm migration:create"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "@mikro-orm/migrations": "^4.5.7",
     "@mikro-orm/postgresql": "^4.5.7",
     "apollo-server-express": "^2.25.2",
+    "argon2": "^0.28.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.5.1",

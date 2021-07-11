@@ -1,6 +1,7 @@
 import { MikroORM } from "@mikro-orm/core";
 import { Post } from "./entities/Post";
 import path from 'path';
+import { User } from "./entities/User";
 
 export default {
   migrations: {
@@ -12,5 +13,5 @@ export default {
   password: process.env.DB_PASS ? process.env.DB_PASS : 'megh123',
   type: 'postgresql',
   debug: process.env.NODE_ENV !== 'production',
-  entities: [Post]
+  entities: [Post, User]
 } as Parameters<typeof MikroORM.init>[0];
